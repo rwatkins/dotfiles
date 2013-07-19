@@ -82,11 +82,10 @@ call NumberToggle()
 
 " Set custom colorscheme only in MacVim (the same colorscheme doesn't
 " translate well when using vim via iTerm)
-
 if has("gui_running")
     set guioptions=egmrt
     set background=dark
-    colorscheme Tomorrow-Night-Eighties
+    colorscheme Tomorrow-Night
 endif
 
 
@@ -130,9 +129,6 @@ fun! s:LongLineHLToggle()
   echo "Long lines unhighlighted"
  endif
 endfunction
-
-"set colorcolumn=0
-au BufRead,BufNewFile *.clj set colorcolumn=0
 
 
 " Enable pathogen
