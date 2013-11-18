@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " My bundles here
 Bundle 'airblade/vim-gitgutter'
+Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'kevinw/pyflakes-vim'  - Use Syntastic instead
 Bundle 'kien/ctrlp.vim'
