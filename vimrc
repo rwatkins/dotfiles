@@ -62,6 +62,9 @@ set t_Co=256
 set guifont=Inconsolata-g:h12
 set linespace=1
 
+" Highlight search results
+set hlsearch
+
 
 " Relative/absolute line numbers
 function! NumberToggle()
