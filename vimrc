@@ -40,9 +40,12 @@ let g:pymode_lint = 0
 let g:syntastic_python_checkers=["flake8"]
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 4
 let g:syntastic_python_flake8_args='--max-line-length=99'
-
 let g:syntastic_html_checkers=[]
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 
 
 " Autocomplete(?)
@@ -79,8 +82,10 @@ set hlsearch
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
+    set norelativenumber
   else
     set relativenumber
+    set number
   endif
 endfunc
 
@@ -99,7 +104,6 @@ if has("gui_running")
     set background=dark
     colorscheme Tomorrow-Night
 endif
-
 
 " For MacVim, always show tabs (by default, tabs only show up when you have
 " more than one tab open)
