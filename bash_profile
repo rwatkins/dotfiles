@@ -20,3 +20,5 @@ export TERM=xterm-color
 #sets up proper alias commands when called
 alias ls='ls -G'
 alias ll='ls -hl'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
