@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 " My bundles here
 Bundle 'airblade/vim-gitgutter'
 Bundle 'groenewege/vim-less'
+Bundle 'haya14busa/incsearch.vim'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'kevinw/pyflakes-vim'  - Use Syntastic instead
 Bundle 'kien/ctrlp.vim'
@@ -124,6 +125,12 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+
+" incsearch.vim
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 
 " Save on unfocus
