@@ -106,7 +106,7 @@ call NumberToggle()
 if has("gui_running")
     set guioptions=egmrt
     set background=dark
-    colorscheme Tomorrow-Night
+    colorscheme solarized
 endif
 
 " For MacVim, always show tabs (by default, tabs only show up when you have
