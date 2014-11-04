@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " My bundles here
 Bundle 'airblade/vim-gitgutter'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'groenewege/vim-less'
 Bundle 'haya14busa/incsearch.vim'
 Bundle 'kchmck/vim-coffee-script'
