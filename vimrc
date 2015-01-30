@@ -7,22 +7,24 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle (required)
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here
-Bundle 'airblade/vim-gitgutter'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'groenewege/vim-less'
-Bundle 'haya14busa/incsearch.vim'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'kevinw/pyflakes-vim'  - Use Syntastic instead
-Bundle 'kien/ctrlp.vim'
-Bundle 'klen/python-mode'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
+Plugin 'groenewege/vim-less'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'kchmck/vim-coffee-script'
+"Plugin 'kevinw/pyflakes-vim'  - Use Syntastic instead
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
 
 
 " Use , as Leader key
@@ -47,6 +49,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
 let g:syntastic_python_flake8_args='--max-line-length=99'
 let g:syntastic_html_checkers=[]
+let g:syntastic_go_checkers=[]
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
@@ -66,9 +69,10 @@ set expandtab
 set ruler
 set smartindent
 set softtabstop=4
+set tabstop=4
 set shiftwidth=4
 
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:›\ ,trail:~,extends:>,precedes:<
 set list
 
 set laststatus=2
@@ -106,7 +110,7 @@ call NumberToggle()
 if has("gui_running")
     set guioptions=egmrt
     set background=dark
-    colorscheme solarized
+    colorscheme Tomorrow-Night
 endif
 
 " For MacVim, always show tabs (by default, tabs only show up when you have
@@ -116,6 +120,7 @@ set showtabline=2
 
 " For git gutter, make colors work properly on start
 au VimEnter * highlight clear SignColumn
+"let g:gitgutter_enabled = 0
 
 
 " Disable arrow keys

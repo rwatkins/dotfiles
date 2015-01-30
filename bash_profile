@@ -4,7 +4,7 @@ source ~/git-prompt.sh
 export PATH=/Users/riley/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
+#export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 export PATH=/Users/riley/.cabal/bin:$PATH
 export GOPATH=$HOME/code/go
 export PATH=$GOPATH/bin:$PATH
