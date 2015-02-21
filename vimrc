@@ -3,8 +3,8 @@
 set nocompatible
 filetype off  " required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle (required)
 Plugin 'gmarik/Vundle.vim'
@@ -26,15 +26,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 
+call vundle#end()
+filetype on
+filetype plugin indent on
 
 " Use , as Leader key
 let mapleader = ","
 
 " Required for ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-filetype on
-filetype plugin indent on
 
 
 " Disable python folding
