@@ -1,6 +1,8 @@
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/git-completion.bash
 source ~/git-prompt.sh
+# chruby
+source /usr/local/share/chruby/chruby.sh
 export PATH=/Users/riley/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
