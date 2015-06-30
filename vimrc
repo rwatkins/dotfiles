@@ -32,7 +32,10 @@ filetype on
 filetype plugin indent on
 
 " Use , as Leader key
-let mapleader = ","
+"let mapleader = ","
+
+" Use Space as Leader key
+let mapleader = "\<Space>"
 
 " Required for ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
