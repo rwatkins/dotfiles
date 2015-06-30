@@ -78,6 +78,7 @@ set tabstop=4
 set shiftwidth=4
 
 au Filetype ruby set tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype javascript set tabstop=2 softtabstop=2 shiftwidth=2
 
 set listchars=tab:›\ ,trail:~,extends:>,precedes:<
 set list
