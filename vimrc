@@ -177,7 +177,7 @@ endfunction
 
 " for ctrlp
 let g:ctrlp_map = '<Leader>t'  " Make it act like Command-T
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc
 
 " statusline flags for syntastic
 
