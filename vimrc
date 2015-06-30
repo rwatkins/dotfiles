@@ -48,6 +48,7 @@ let g:pymode_rope = 0
 let g:pymode_options_colorcolumn = 0
 
 let g:syntastic_python_checkers=["flake8"]
+let g:syntastic_javascript_checkers=[]
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
