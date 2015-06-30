@@ -16,7 +16,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'haya14busa/incsearch.vim'
-Plugin 'kchmck/vim-coffee-script'
+"Plugin 'kchmck/vim-coffee-script'
 "Plugin 'kevinw/pyflakes-vim'  - Use Syntastic instead
 Plugin 'kien/ctrlp.vim'
 Plugin 'klen/python-mode'
