@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'elixir-lang/vim-elixir'
+"Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'haya14busa/incsearch.vim'
