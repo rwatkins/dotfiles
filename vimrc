@@ -78,6 +78,14 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 
+" Set custom colorscheme only in MacVim (the same colorscheme doesn't
+" translate well when using vim via iTerm)
+if has("gui_running")
+    set guioptions=egmrt
+    set background=dark
+    colorscheme Tomorrow-Night
+endif
+
 au Filetype ruby set tabstop=2 softtabstop=2 shiftwidth=2
 au Filetype javascript set tabstop=2 softtabstop=2 shiftwidth=2
 
@@ -112,15 +120,6 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
 call NumberToggle()
-
-
-" Set custom colorscheme only in MacVim (the same colorscheme doesn't
-" translate well when using vim via iTerm)
-if has("gui_running")
-    set guioptions=egmrt
-    set background=dark
-    colorscheme Tomorrow-Night
-endif
 
 " For MacVim, always show tabs (by default, tabs only show up when you have
 " more than one tab open)
