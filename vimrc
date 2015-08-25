@@ -143,13 +143,19 @@ imap <right> <nop>
 
 
 " incsearch.vim
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+if has("gui_running")
+    map / <Plug>(incsearch-forward)
+    map ? <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+endif
 
 
 " Save on unfocus
 :au FocusLost * silent! wa
+
+
+" Auto reload file changes on focus
+set autoread
 
 
 " For highlighting long lines
