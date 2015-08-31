@@ -12,20 +12,15 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'elixir-lang/vim-elixir'
-"Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'haya14busa/incsearch.vim'
-"Plugin 'kchmck/vim-coffee-script'
-"Plugin 'kevinw/pyflakes-vim'  - Use Syntastic instead
 Plugin 'kien/ctrlp.vim'
 Plugin 'klen/python-mode'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
