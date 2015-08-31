@@ -41,6 +41,8 @@ let mapleader = "\<Space>"
 " Required for ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" Stop that stupid window from popping up
+map q: :q
 
 " Disable python folding
 let g:pymode_folding = 0
