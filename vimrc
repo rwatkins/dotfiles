@@ -35,6 +35,14 @@ filetype plugin indent on
 " Use Space as Leader key
 let mapleader = "\<Space>"
 
+" Discover text search object (http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
+vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+omap s :normal vs<CR>
+
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " Required for ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -59,6 +67,7 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
+au BufRead,BufNewFile *.rs set conceallevel=0
 
 " Autocomplete(?)
 set ofu=syntaxcomplete#Complete
