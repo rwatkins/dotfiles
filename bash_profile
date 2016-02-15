@@ -1,5 +1,3 @@
-bind '"\t":menu-complete'
-
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/git-completion.bash
 source ~/git-prompt.sh
