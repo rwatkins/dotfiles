@@ -199,8 +199,6 @@ set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-au BufRead,BufNewFile *.rs setfiletype rust
-
 
 " Allow filewatchers to recognize when the file changes (needed for things
 " like watchdog)
