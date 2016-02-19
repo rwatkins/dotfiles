@@ -1,8 +1,6 @@
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/git-completion.bash
 source ~/git-prompt.sh
-# chruby
-source /usr/local/share/chruby/chruby.sh
 export PATH=/Users/riley/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
@@ -28,8 +26,6 @@ alias ll='ls -hl'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-chruby 2.1.5
 
 # Add GHC 7.8.4 to the PATH, via https://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
