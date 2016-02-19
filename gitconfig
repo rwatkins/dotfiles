@@ -1,0 +1,29 @@
+[user]
+	name = Riley Watkins
+	email = riley@rileywatkins.com
+[core]
+	quotepath = false
+	excludesfile = /Users/riley/.gitignore_global
+	editor = mvim -f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[github]
+	user = rwatkins
+	token = bd52411e980a64be8eaf8a66fade3e91
+[color]
+	ui = 1
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+	br = branch
+	ci = commit
+	co = checkout
+	st = status -sb
+	fa = fetch -p --all
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
