@@ -104,8 +104,8 @@ set laststatus=2
 
 set t_Co=256
 
-set guifont=Inconsolata-g:h12
-set linespace=1
+set guifont=Menlo:h12
+set linespace=3
 
 " Highlight search results
 set hlsearch
