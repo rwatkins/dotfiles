@@ -4,7 +4,6 @@ source ~/git-prompt.sh
 export PATH=/Users/riley/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-#export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 export PATH=/Users/riley/.cabal/bin:$PATH
 export GOPATH=$HOME/code/go
 export PATH=$GOPATH/bin:$PATH
@@ -21,11 +20,6 @@ export TERM=xterm-color
 #sets up proper alias commands when called
 alias ls='ls -G'
 alias ll='ls -hl'
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # Add GHC 7.8.4 to the PATH, via https://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
