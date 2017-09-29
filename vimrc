@@ -12,22 +12,35 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'groenewege/vim-less'
 Plugin 'haya14busa/incsearch.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'joshdick/onedark.vim'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
+Plugin 'lambdatoast/elm.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'racer-rust/vim-racer'
+Plugin 'robertmeta/nofrils'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-expand-region'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-vividchalk'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'wlangstroth/vim-racket'
 
 call vundle#end()
 filetype on
 filetype plugin indent on
+
+command! Noh noh
 
 " Use , as Leader key
 "let mapleader = ","
@@ -56,6 +69,7 @@ let g:pymode_rope = 0
 let g:pymode_options_colorcolumn = 0
 
 let g:syntastic_python_checkers=["flake8"]
+let g:syntastic_haskell_checkers=[]
 let g:syntastic_javascript_checkers=[]
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -66,14 +80,12 @@ let g:syntastic_go_checkers=[]
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_enable_racket_racket_checker = 0
 
 au BufRead,BufNewFile *.rs set conceallevel=0
 
 " Autocomplete(?)
 set ofu=syntaxcomplete#Complete
-
-
-" Basics
 
 syntax enable
 
@@ -94,8 +106,11 @@ if has("gui_running")
     colorscheme Tomorrow-Night
 endif
 
-au Filetype ruby set tabstop=2 softtabstop=2 shiftwidth=2
+
+"au Filetype haskell set tabstop=2 softtabstop=2 shiftwidth=2
+au BufRead,BufNewFile *.hs set tabstop=2 softtabstop=2 shiftwidth=2
 au Filetype javascript set tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype ruby set tabstop=2 softtabstop=2 shiftwidth=2
 
 set listchars=tab:›\ ,trail:~,extends:>,precedes:<
 set list
@@ -104,8 +119,8 @@ set laststatus=2
 
 set t_Co=256
 
-set guifont=Menlo:h12
-set linespace=3
+set guifont=Inconsolata-g:h13
+set linespace=0
 
 " Highlight search results
 set hlsearch
@@ -150,16 +165,20 @@ imap <left> <nop>
 imap <right> <nop>
 
 
+" Map jj to Escape in insert mode
+inoremap jj <Esc>
+
+
 " incsearch.vim
 if has("gui_running")
-    map / <Plug>(incsearch-forward)
-    map ? <Plug>(incsearch-backward)
-    map g/ <Plug>(incsearch-stay)
+  map / <Plug>(incsearch-forward)
+  map ? <Plug>(incsearch-backward)
+  map g/ <Plug>(incsearch-stay)
 endif
 
 
 " Save on unfocus
-:au FocusLost * silent! wa
+au FocusLost * silent! wa
 
 
 " Auto reload file changes on focus
@@ -167,31 +186,25 @@ set autoread
 
 
 " For highlighting long lines
-
 nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
 "au BufRead,BufNewFile *.py :call<SID>LongLineHLToggle()<cr>
 hi OverLength ctermbg=none cterm=none
 match OverLength /\%>80v/
 fun! s:LongLineHLToggle()
- if !exists('w:longlinehl')
-  let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
-  echo "Long lines highlighted"
- else
-  call matchdelete(w:longlinehl)
-  unl w:longlinehl
-  echo "Long lines unhighlighted"
- endif
+  if !exists('w:longlinehl')
+    let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
+    echo "Long lines highlighted"
+  else
+    call matchdelete(w:longlinehl)
+    unl w:longlinehl
+    echo "Long lines unhighlighted"
+  endif
 endfunction
-
-
-" Enable pathogen
-"call pathogen#infect()
-"call pathogen#helptags()
 
 
 " for ctrlp
 let g:ctrlp_map = '<Leader>t'  " Make it act like Command-T
-set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc,*/test/reports/*
 
 " statusline flags for syntastic
 
@@ -217,3 +230,21 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
+
+
+" Rust RACER (https://github.com/racer-rust/vim-racer)
+set hidden
+let g:racer_cmd = "/Users/riley/.cargo/bin/racer"
+let $RUST_SRC_PATH = "/Users/riley/code/rust/rust/src"
+
+" Use ag/silver_searcher
+let g:ackprg = 'ag --vimgrep --smart-case --ignore-dir=public/assets'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+nnoremap <Leader>e :tabe<Space>
+
+let g:netrw_liststyle = 3
+let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro number"
