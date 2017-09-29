@@ -103,7 +103,7 @@ set shiftwidth=4
 if has("gui_running")
     set guioptions=egmrt
     set background=dark
-    colorscheme Tomorrow-Night
+    colorscheme base16-oceanicnext
 endif
 
 
