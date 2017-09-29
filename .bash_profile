@@ -70,3 +70,6 @@ gcoissue() {
 
     git checkout "$BRANCH"
 }
+
+# API keys and such
+. ~/.keys
