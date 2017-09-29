@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+SESSION=$USER
+
+tmux -2 new-session -d -s $SESSION
+
+# Create a window for htop
+tmux rename-window -t $SESSION 'htop'
+tmux send-keys 'sudo htop' C-m
+
+tmux new-window -t $SESSION -c /opt/opallabs/opal -n 'webserver'
+tmux send-keys 'sudo service opal-webserver stop' C-m
+tmux send-keys 'be rails s -b 0.0.0.0' C-m
+
+tmux new-window -t $SESSION -c /opt/opallabs/opal -n 'sidekiq'
+tmux send-keys 'sudo service opal-sidekiq stop' C-m
+tmux send-keys 'be sidekiq -C config/sidekiq.yml -i 0' C-m
+
+tmux new-window -t $SESSION -c /opt/opallabs/opal -n 'shell'
+
+tmux a
