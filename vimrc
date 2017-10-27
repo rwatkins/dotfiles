@@ -9,32 +9,40 @@ call vundle#begin()
 " let Vundle manage Vundle (required)
 Plugin 'gmarik/Vundle.vim'
 
+
 " My bundles here
-Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+"
+" Languages
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'groenewege/vim-less'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'jnurmine/Zenburn'
-Plugin 'joshdick/onedark.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
 Plugin 'lambdatoast/elm.vim'
-Plugin 'mileszs/ack.vim'
 Plugin 'racer-rust/vim-racer'
-Plugin 'robertmeta/nofrils'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wlangstroth/vim-racket'
+
+" Tools
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-expand-region'
-Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+
+" Colors
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'joshdick/onedark.vim'
+Plugin 'robertmeta/nofrils'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-vividchalk'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'wlangstroth/vim-racket'
+
 
 call vundle#end()
 filetype on
