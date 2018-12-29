@@ -13,15 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here
 "
 " Languages
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'klen/python-mode'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'rust-lang/rust.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wlangstroth/vim-racket'
 
 " Tools
 Plugin 'airblade/vim-gitgutter'
@@ -30,19 +23,10 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
-Plugin 'jnurmine/Zenburn'
-Plugin 'joshdick/onedark.vim'
-Plugin 'robertmeta/nofrils'
-Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-vividchalk'
-
 
 call vundle#end()
 filetype on
@@ -61,8 +45,6 @@ vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
 omap s :normal vs<CR>
 
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 
 " Required for ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
