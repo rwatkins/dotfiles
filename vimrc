@@ -14,6 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 "
 " Languages
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'vim-ruby/vim-ruby'
 
 " Tools
