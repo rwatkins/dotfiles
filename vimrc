@@ -2,8 +2,8 @@
 
 set nocompatible
 filetype off  " required for Vundle
-
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 " let Vundle manage Vundle (required)
@@ -18,9 +18,9 @@ Plugin 'vim-ruby/vim-ruby'
 
 " Tools
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'haya14busa/incsearch.vim'
-Plugin 'mileszs/ack.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim', { 'do': './install --all' }
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-endwise'
@@ -37,10 +37,20 @@ command! Noh noh
 " Use Space as Leader key
 let mapleader = "\<Space>"
 
+" FZF
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>t :FZF<CR>
+
+" FZF/ripgrep
+let g:rg_command = '
+  \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"
+  \ -g "*.{js,json,php,md,styl,jade,html,config,py,cpp,c,go,hs,rb,conf,rs}"
+  \ -g "!{.git,node_modules,vendor}/*" '
+command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 
-" Required for ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" Ripgrep
+nnoremap <Leader>r :Rg<Space>
 
 " Stop that stupid window from popping up
 map q: :q
@@ -183,11 +193,6 @@ fun! s:LongLineHLToggle()
     echo "Long lines unhighlighted"
   endif
 endfunction
-
-
-" for ctrlp
-let g:ctrlp_map = '<Leader>t'  " Make it act like Command-T
-set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc,*/test/reports/*
 
 " statusline flags for syntastic
 
