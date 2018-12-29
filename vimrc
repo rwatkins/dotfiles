@@ -40,6 +40,10 @@ nnoremap <C-h> :noh<cr>
 " Use Space as Leader key
 let mapleader = "\<Space>"
 
+" Trim trailing whitespace on save
+autocmd BufWritePre *.rb,*.js,*.coffee :%s/\s\+$//e
+nnoremap <Leader>s :%s/\s\+$//e<CR>:noh<CR>
+
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>t :FZF<CR>
