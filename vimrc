@@ -34,16 +34,9 @@ filetype plugin indent on
 
 command! Noh noh
 
-" Use , as Leader key
-"let mapleader = ","
-
 " Use Space as Leader key
 let mapleader = "\<Space>"
 
-" Discover text search object (http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
-vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
-    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
-omap s :normal vs<CR>
 
 
 " Required for ctrlp
