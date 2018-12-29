@@ -51,7 +51,6 @@ let g:rg_command = '
   \ -g "!{.git,node_modules,vendor}/*" '
 command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
-
 " Ripgrep
 nnoremap <Leader>r :Rg<Space>
 
@@ -149,7 +148,6 @@ set showtabline=2
 au VimEnter * highlight clear SignColumn
 "let g:gitgutter_enabled = 0
 
-
 " Disable arrow keys
 map <up> <nop>
 map <down> <nop>
@@ -160,10 +158,8 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-
 " Map jj to Escape in insert mode
 inoremap jj <Esc>
-
 
 " incsearch.vim
 if has("gui_running")
@@ -172,18 +168,14 @@ if has("gui_running")
   map g/ <Plug>(incsearch-stay)
 endif
 
-
 " Save on unfocus
 au FocusLost * silent! wa
-
 
 " Auto reload file changes on focus
 set autoread
 
-
 " For highlighting long lines
 nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
-"au BufRead,BufNewFile *.py :call<SID>LongLineHLToggle()<cr>
 hi OverLength ctermbg=none cterm=none
 match OverLength /\%>80v/
 fun! s:LongLineHLToggle()
@@ -198,15 +190,12 @@ fun! s:LongLineHLToggle()
 endfunction
 
 " statusline flags for syntastic
-
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-
 " Allow filewatchers to recognize when the file changes (needed for things
 " like watchdog)
-
 "set nobackup
 "set noswapfile
 "set nowritebackup
@@ -221,19 +210,6 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
-
-
-" Rust RACER (https://github.com/racer-rust/vim-racer)
-set hidden
-let g:racer_cmd = "/Users/riley/.cargo/bin/racer"
-let $RUST_SRC_PATH = "/Users/riley/code/rust/rust/src"
-
-" Use ag/silver_searcher
-let g:ackprg = 'ag --vimgrep --smart-case --ignore-dir=public/assets'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
 
 nnoremap <Leader>e :tabe<Space>
 
