@@ -35,6 +35,7 @@ filetype on
 filetype plugin indent on
 
 command! Noh noh
+nnoremap <C-h> :noh<cr>
 
 " Use Space as Leader key
 let mapleader = "\<Space>"
