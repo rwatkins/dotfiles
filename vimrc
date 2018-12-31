@@ -108,9 +108,9 @@ set backspace=indent,eol,start
 " Set custom colorscheme only in MacVim (the same colorscheme doesn't
 " translate well when using vim via iTerm)
 if has("gui_running")
-    set guioptions=egmrt
-    set background=dark
-    colorscheme base16-oceanicnext
+  set guioptions=egmrt
+  set background=dark
+  colorscheme base16-oceanicnext
 endif
 
 
