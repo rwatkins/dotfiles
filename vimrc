@@ -99,6 +99,12 @@ set tabstop=4
 set shiftwidth=4
 set number relativenumber
 
+" indent  allow backspacing over autoindent
+" eol     allow backspacing over line breaks (join lines)
+" start   allow backspacing over the start of insert; CTRL-W and CTRL-U
+"         stop once at the start of insert.
+set backspace=indent,eol,start
+
 " Set custom colorscheme only in MacVim (the same colorscheme doesn't
 " translate well when using vim via iTerm)
 if has("gui_running")
