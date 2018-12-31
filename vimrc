@@ -21,6 +21,7 @@ Plugin 'vim-ruby/vim-ruby'
 " Tools
 Plugin 'airblade/vim-gitgutter'
 Plugin 'haya14busa/incsearch.vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim', { 'do': './install --all' }
 Plugin 'scrooloose/nerdcommenter'
@@ -96,6 +97,7 @@ set smartindent
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
+set number relativenumber
 
 " Set custom colorscheme only in MacVim (the same colorscheme doesn't
 " translate well when using vim via iTerm)
@@ -123,25 +125,6 @@ set linespace=0
 
 " Highlight search results
 set hlsearch
-
-
-" Relative/absolute line numbers
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-    set norelativenumber
-  else
-    set relativenumber
-    set number
-  endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
-
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
-
-call NumberToggle()
 
 " For MacVim, always show tabs (by default, tabs only show up when you have
 " more than one tab open)
