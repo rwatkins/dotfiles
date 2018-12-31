@@ -118,6 +118,7 @@ endif
 au BufRead,BufNewFile *.hs set tabstop=2 softtabstop=2 shiftwidth=2
 au Filetype javascript set tabstop=2 softtabstop=2 shiftwidth=2
 au Filetype ruby set tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype elixir set tabstop=2 softtabstop=2 shiftwidth=2
 
 set listchars=tab:›\ ,trail:~,extends:>,precedes:<
 set list
