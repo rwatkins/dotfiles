@@ -110,7 +110,7 @@ set backspace=indent,eol,start
 if has("gui_running")
   set guioptions=egmrt
   set background=dark
-  colorscheme base16-oceanicnext
+  colorscheme base16-ocean
 endif
 
 
