@@ -85,7 +85,7 @@ let g:syntastic_enable_racket_racket_checker = 0
 au BufRead,BufNewFile *.rs set conceallevel=0
 
 " Autocomplete(?)
-set ofu=syntaxcomplete#Complete
+"set ofu=syntaxcomplete#Complete
 
 syntax enable
 
@@ -127,8 +127,8 @@ set laststatus=2
 
 set t_Co=256
 
-set guifont=Menlo:h13
-set linespace=3
+set guifont=Inconsolata-g:h14
+set linespace=0
 
 " Highlight search results
 set hlsearch
@@ -209,3 +209,5 @@ nnoremap <Leader>e :tabe<Space>
 
 let g:netrw_liststyle = 3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro number"
+
+nnoremap <Leader>f :silent !cargo +nightly fmt<CR>
