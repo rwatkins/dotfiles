@@ -4,10 +4,11 @@
 [core]
 	quotepath = false
 	excludesfile = /Users/riley/.gitignore_global
-	editor = mvim -f
+	#editor = mvim -f
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -23,6 +24,11 @@
 	co = checkout
 	st = status -sb
 	fa = fetch -p --all
+	dc = diff --cached
+	ds = diff --cached
+	df = diff
+	dif = diff
+	ff = pull --ff-only
 [push]
 	default = simple
 [credential]
