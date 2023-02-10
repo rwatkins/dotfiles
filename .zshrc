@@ -20,5 +20,10 @@ alias ll='ls -hl'
 alias current-branch='git rev-parse --abbrev-ref HEAD'
 
 # Delete merged branches
-alias delete-merged='git branch --merged | grep -v "\*" | grep -v master | grep -v development | xargs -n 1 git branch -d'
+alias delete-merged='git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d'
+alias gd='git diff'
+alias gdc='git dc'
+alias dc='docker compose'
+alias dcr='docker compose run --rm'
+alias cleanup-containers='docker ps -f status=exited --format {{.ID}} | xargs docker rm'
 

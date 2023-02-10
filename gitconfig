@@ -29,6 +29,7 @@
 	df = diff
 	dif = diff
 	ff = pull --ff-only
+	ap = add -p
 [push]
 	default = simple
 [credential]
