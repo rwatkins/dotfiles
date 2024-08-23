@@ -4,7 +4,6 @@
 [core]
 	quotepath = false
 	excludesfile = /Users/riley/.gitignore_global
-	#editor = mvim -f
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
