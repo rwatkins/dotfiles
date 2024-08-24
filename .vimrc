@@ -42,7 +42,7 @@ nnoremap <C-h> :noh<cr>
 let mapleader = "\<Space>"
 
 " Trim trailing whitespace on save
-autocmd BufWritePre *.rb,*.js,*.coffee :%s/\s\+$//e
+autocmd BufWritePre *.py,*.rb,*.js,*.jsx,*.coffee,*.html :%s/\s\+$//e
 nnoremap <Leader>s :%s/\s\+$//e<CR>:noh<CR>
 
 " FZF
