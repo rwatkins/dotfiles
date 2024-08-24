@@ -11,9 +11,13 @@ export PATH="/usr/local/bin:/bin:/usr/bin:$PATH"
 export PATH="/Users/riley/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Enables color for iTerm
 export TERM=xterm-color
+
+# Nodenv
+eval "$(nodenv init -)"
 
 ## Aliases
 # Sets up proper alias commands when called
@@ -45,3 +49,6 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 #export HOMEBREW_NO_AUTO_UPDATE=1
 export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
+
+# opam configuration
+[[ ! -r /Users/riley/.opam/opam-init/init.zsh ]] || source /Users/riley/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
