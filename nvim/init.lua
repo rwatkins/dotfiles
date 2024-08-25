@@ -28,6 +28,19 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   end,
 })
 
+-- C-n and C-p to cycle tabs
+vim.cmd([[
+  nnoremap <C-p> gT
+  nnoremap <C-n> gt
+]])
+
+-- Press Esc to remove search highlight
+vim.cmd("nnoremap <silent> <esc> :noh<cr><esc>")
+
+--
+-- Dependencies
+--
+
 -- Clone mini.nvim manually in a way that it gets managed by mini.deps
 local path_package = vim.fn.stdpath('data') .. '/site/'
 local mini_path = path_package .. 'pack/deps/start/mini.nvim'
@@ -44,9 +57,6 @@ if not vim.loop.fs_stat(mini_path) then
   vim.cmd('packadd mini.nvim | helptags ALL')
   vim.cmd('echo "Installed `mini.nvim`" | redraw')
 end
-
--- After search highlights all of the occurrences, pressing Esc removes the highlight.
-vim.cmd("nnoremap <silent> <esc> :noh<cr><esc>")
 
 -- Set up mini.deps
 require('mini.deps').setup({ path = { package = path_package } })
